@@ -12,6 +12,9 @@
 		B9349DCF281C369600F2AB56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9349DCE281C369600F2AB56 /* Assets.xcassets */; };
 		B9349DD2281C369600F2AB56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9349DD1281C369600F2AB56 /* Preview Assets.xcassets */; };
 		B9349DD9281C373A00F2AB56 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9349DD8281C373A00F2AB56 /* HomeView.swift */; };
+		B9349DDB281C385000F2AB56 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9349DDA281C385000F2AB56 /* GoalView.swift */; };
+		B9349DDD281C387B00F2AB56 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9349DDC281C387B00F2AB56 /* MissionView.swift */; };
+		B9349DDF281C388400F2AB56 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9349DDE281C388400F2AB56 /* MyPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		B9349DCE281C369600F2AB56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9349DD1281C369600F2AB56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9349DD8281C373A00F2AB56 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B9349DDA281C385000F2AB56 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		B9349DDC281C387B00F2AB56 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		B9349DDE281C388400F2AB56 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 				B9349DCA281C369500F2AB56 /* MamujiApp.swift */,
 				B9349DCC281C369500F2AB56 /* ContentView.swift */,
 				B9349DD8281C373A00F2AB56 /* HomeView.swift */,
+				B9349DDA281C385000F2AB56 /* GoalView.swift */,
+				B9349DDC281C387B00F2AB56 /* MissionView.swift */,
+				B9349DDE281C388400F2AB56 /* MyPageView.swift */,
 				B9349DCE281C369600F2AB56 /* Assets.xcassets */,
 				B9349DD0281C369600F2AB56 /* Preview Content */,
 			);
@@ -143,6 +152,9 @@
 				B9349DD9281C373A00F2AB56 /* HomeView.swift in Sources */,
 				B9349DCD281C369500F2AB56 /* ContentView.swift in Sources */,
 				B9349DCB281C369500F2AB56 /* MamujiApp.swift in Sources */,
+				B9349DDB281C385000F2AB56 /* GoalView.swift in Sources */,
+				B9349DDD281C387B00F2AB56 /* MissionView.swift in Sources */,
+				B9349DDF281C388400F2AB56 /* MyPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
