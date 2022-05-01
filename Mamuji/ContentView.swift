@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    init() {
+        UITabBar.appearance().unselectedItemTintColor = UIColor.systemGray4
+    }
+    
     var body: some View {
         TabView {
-            HomeView()
+            HomeView(interval: .init()) { _ in
+                Text("1")
+                    .padding(20)
+                    .background(Color(.systemGray4))
+                    .cornerRadius(8)
+            }
                 .tabItem{
                     Label {
                         Text("홈")
@@ -37,6 +46,7 @@ struct ContentView: View {
                     }
                 }
         }
+        .accentColor(Color(.systemGray))
     }
 }
 
