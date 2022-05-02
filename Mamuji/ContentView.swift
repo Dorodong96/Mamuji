@@ -14,12 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            HomeView(interval: .init()) { _ in
-                Text("1")
-                    .padding(20)
-                    .background(Color(.systemGray4))
-                    .cornerRadius(8)
-            }
+            HomeView()
                 .tabItem{
                     Label {
                         Text("홈")

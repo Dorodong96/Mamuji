@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B91EAE0F281FF7EB00874133 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91EAE0E281FF7EB00874133 /* CustomDatePicker.swift */; };
+		B91EAE112820029100874133 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91EAE102820029100874133 /* DateValue.swift */; };
+		B91EAE1728201D9B00874133 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91EAE1628201D9B00874133 /* Task.swift */; };
 		B9349DCB281C369500F2AB56 /* MamujiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9349DCA281C369500F2AB56 /* MamujiApp.swift */; };
 		B9349DCD281C369500F2AB56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9349DCC281C369500F2AB56 /* ContentView.swift */; };
 		B9349DCF281C369600F2AB56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9349DCE281C369600F2AB56 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B91EAE0E281FF7EB00874133 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		B91EAE102820029100874133 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
+		B91EAE1628201D9B00874133 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		B9349DC7281C369500F2AB56 /* Mamuji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mamuji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9349DCA281C369500F2AB56 /* MamujiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MamujiApp.swift; sourceTree = "<group>"; };
 		B9349DCC281C369500F2AB56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +46,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B91EAE0C281FF6CD00874133 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9349DD8281C373A00F2AB56 /* HomeView.swift */,
+				B9349DDA281C385000F2AB56 /* GoalView.swift */,
+				B9349DDE281C388400F2AB56 /* MyPageView.swift */,
+				B9349DDC281C387B00F2AB56 /* MissionView.swift */,
+				B91EAE0E281FF7EB00874133 /* CustomDatePicker.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B91EAE0D281FF6E000874133 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B91EAE102820029100874133 /* DateValue.swift */,
+				B91EAE1628201D9B00874133 /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B9349DBE281C369500F2AB56 = {
 			isa = PBXGroup;
 			children = (
@@ -59,12 +86,10 @@
 		B9349DC9281C369500F2AB56 /* Mamuji */ = {
 			isa = PBXGroup;
 			children = (
+				B91EAE0D281FF6E000874133 /* Model */,
+				B91EAE0C281FF6CD00874133 /* View */,
 				B9349DCA281C369500F2AB56 /* MamujiApp.swift */,
 				B9349DCC281C369500F2AB56 /* ContentView.swift */,
-				B9349DD8281C373A00F2AB56 /* HomeView.swift */,
-				B9349DDA281C385000F2AB56 /* GoalView.swift */,
-				B9349DDC281C387B00F2AB56 /* MissionView.swift */,
-				B9349DDE281C388400F2AB56 /* MyPageView.swift */,
 				B9349DCE281C369600F2AB56 /* Assets.xcassets */,
 				B9349DD0281C369600F2AB56 /* Preview Content */,
 			);
@@ -154,6 +179,9 @@
 				B9349DCB281C369500F2AB56 /* MamujiApp.swift in Sources */,
 				B9349DDB281C385000F2AB56 /* GoalView.swift in Sources */,
 				B9349DDD281C387B00F2AB56 /* MissionView.swift in Sources */,
+				B91EAE112820029100874133 /* DateValue.swift in Sources */,
+				B91EAE0F281FF7EB00874133 /* CustomDatePicker.swift in Sources */,
+				B91EAE1728201D9B00874133 /* Task.swift in Sources */,
 				B9349DDF281C388400F2AB56 /* MyPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
