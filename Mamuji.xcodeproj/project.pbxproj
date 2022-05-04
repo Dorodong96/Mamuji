@@ -18,6 +18,10 @@
 		B9349DDB281C385000F2AB56 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9349DDA281C385000F2AB56 /* GoalView.swift */; };
 		B9349DDD281C387B00F2AB56 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9349DDC281C387B00F2AB56 /* MissionView.swift */; };
 		B9349DDF281C388400F2AB56 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9349DDE281C388400F2AB56 /* MyPageView.swift */; };
+		CC9EFA1E2821089300FC83A0 /* BMDOHYEON_ttf.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CC9EFA1D2821089300FC83A0 /* BMDOHYEON_ttf.ttf */; };
+		CC9EFA2028210F4900FC83A0 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9EFA1F28210F4900FC83A0 /* Mission.swift */; };
+		CC9EFA23282127AD00FC83A0 /* CircularText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9EFA22282127AD00FC83A0 /* CircularText.swift */; };
+		CCAD4A702820FADC00322F31 /* BMDOHYEON_otf.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCAD4A6F2820FADC00322F31 /* BMDOHYEON_otf.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,11 @@
 		B9349DDA281C385000F2AB56 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
 		B9349DDC281C387B00F2AB56 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		B9349DDE281C388400F2AB56 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		CC9EFA1D2821089300FC83A0 /* BMDOHYEON_ttf.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMDOHYEON_ttf.ttf; sourceTree = "<group>"; };
+		CC9EFA1F28210F4900FC83A0 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		CC9EFA22282127AD00FC83A0 /* CircularText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularText.swift; sourceTree = "<group>"; };
+		CCAD4A6F2820FADC00322F31 /* BMDOHYEON_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMDOHYEON_otf.otf; sourceTree = "<group>"; };
+		CCAD4A712820FDCD00322F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,8 @@
 			children = (
 				B91EAE102820029100874133 /* DateValue.swift */,
 				B91EAE1628201D9B00874133 /* Task.swift */,
+				CC9EFA1F28210F4900FC83A0 /* Mission.swift */,
+				CC9EFA22282127AD00FC83A0 /* CircularText.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -86,6 +97,8 @@
 		B9349DC9281C369500F2AB56 /* Mamuji */ = {
 			isa = PBXGroup;
 			children = (
+				CCAD4A732821075E00322F31 /* Fonts */,
+				CCAD4A712820FDCD00322F31 /* Info.plist */,
 				B91EAE0D281FF6E000874133 /* Model */,
 				B91EAE0C281FF6CD00874133 /* View */,
 				B9349DCA281C369500F2AB56 /* MamujiApp.swift */,
@@ -102,6 +115,15 @@
 				B9349DD1281C369600F2AB56 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CCAD4A732821075E00322F31 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CCAD4A6F2820FADC00322F31 /* BMDOHYEON_otf.otf */,
+				CC9EFA1D2821089300FC83A0 /* BMDOHYEON_ttf.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +186,8 @@
 			files = (
 				B9349DD2281C369600F2AB56 /* Preview Assets.xcassets in Resources */,
 				B9349DCF281C369600F2AB56 /* Assets.xcassets in Resources */,
+				CCAD4A702820FADC00322F31 /* BMDOHYEON_otf.otf in Resources */,
+				CC9EFA1E2821089300FC83A0 /* BMDOHYEON_ttf.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,11 +201,13 @@
 				B9349DD9281C373A00F2AB56 /* HomeView.swift in Sources */,
 				B9349DCD281C369500F2AB56 /* ContentView.swift in Sources */,
 				B9349DCB281C369500F2AB56 /* MamujiApp.swift in Sources */,
+				CC9EFA23282127AD00FC83A0 /* CircularText.swift in Sources */,
 				B9349DDB281C385000F2AB56 /* GoalView.swift in Sources */,
 				B9349DDD281C387B00F2AB56 /* MissionView.swift in Sources */,
 				B91EAE112820029100874133 /* DateValue.swift in Sources */,
 				B91EAE0F281FF7EB00874133 /* CustomDatePicker.swift in Sources */,
 				B91EAE1728201D9B00874133 /* Task.swift in Sources */,
+				CC9EFA2028210F4900FC83A0 /* Mission.swift in Sources */,
 				B9349DDF281C388400F2AB56 /* MyPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,7 +339,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Mamuji/Preview Content\"";
 				DEVELOPMENT_TEAM = BQSHS2D2FB;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "/Users/dongkyukim/Dropbox (Developer Academy)/Workspace/Mamuji/Mamuji/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -342,7 +369,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Mamuji/Preview Content\"";
 				DEVELOPMENT_TEAM = BQSHS2D2FB;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "/Users/dongkyukim/Dropbox (Developer Academy)/Workspace/Mamuji/Mamuji/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

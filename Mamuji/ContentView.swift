@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     init() {
         UITabBar.appearance().unselectedItemTintColor = UIColor.systemGray2
+        UITabBar.appearance().backgroundColor = UIColor.systemGray6
     }
     
     var body: some View {
@@ -26,7 +27,7 @@ struct ContentView: View {
             MissionView()
                 .tabItem{
                     Label {
-                        Text("미션")
+                        Text("도전과제")
                     } icon: {
                         Image(systemName: "note.text")
                     }
@@ -42,6 +43,7 @@ struct ContentView: View {
                 }
         }
         .accentColor(Color(0x757575))
+        //.background(.ultraThinMaterial)
     }
 }
 

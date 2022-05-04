@@ -14,51 +14,30 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-            Text("메무지")
-                    .font(.custom("", size: 40))
-                .fontWeight(.bold)
+                HStack(spacing: 0) {
+                    Text("메무지")
+                        .font(.custom("BMDoHyeon-OTF", size: 55))
+                        .fontWeight(.bold)
+                        .frame(width: 160, height: 80, alignment: .leading)
+                        .padding(.top)
+                    Image("rainbow2")
+                        .resizable()
+                        .frame(width: 70, height: 70, alignment: .leading)
+                }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding()
-                                
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 20) {
-                    // Custom Date Picker
-                    CustomDatePicker(currentDate: $currentDate)
-                }
-                .padding(.vertical)
-            }
-            .navigationBarTitle("")
-                    .navigationBarHidden(true)
-
-            // Safe Area View
-            .safeAreaInset(edge: .bottom) {
-                HStack {
-                    Button {
-                        
-                    } label: {
-                        Text("Add Task")
-                            .fontWeight(.bold)
-                            .padding(.vertical)
-                            .frame(maxWidth: .infinity)
-                            .background(.orange, in: Capsule())
+                .padding(.leading)
+                
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(spacing: 20) {
+                        // Custom Date Picker
+                        CustomDatePicker(currentDate: $currentDate)
                     }
-                    
-                    Button {
-                        
-                    } label: {
-                        Text("Add Remainder")
-                            .fontWeight(.bold)
-                            .padding(.vertical)
-                            .frame(maxWidth: .infinity)
-                            .background(.purple, in: Capsule())
-                    }
+                    .padding()
                 }
-                .padding(.horizontal)
-                .padding(.top, 10)
-                .foregroundColor(.white)
-                .background(.ultraThinMaterial)
+                .navigationBarTitle("홈")
+                .navigationBarHidden(true)
             }
-        }
         }
     }
 }
