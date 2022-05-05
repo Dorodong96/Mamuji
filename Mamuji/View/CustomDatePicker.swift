@@ -87,39 +87,46 @@ struct CustomDatePicker: View {
         }
     }
     
+    @State var tasks = TaskMetaData.dummyData
+    // ToDo Task View
     private var TaskView : some View {
         VStack(spacing: 15) {
             Text("오늘의 할 일")
                 .font(.custom("BMDoHyeon-OTF", size: 30))
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.vertical, 20)
+                .padding(.top, 20)
             
             if let task = tasks.first(where: { task in
                 return isSameDay(date1: task.taskDate, date2: currentDate)
-            }) {
+            })
+            {
+                // Make CheckList in here!!!
                 ForEach(task.task) { task in
-                    VStack(alignment: .leading, spacing: 10) {
-                        
+                    HStack(spacing: 10) {
+                        Button(action: {
+                            //task.toggleTask()
+                        }) {
+                            Image(systemName: "square")
+                                .resizable()
+                                .frame(width: 20, height: 20, alignment: .leading)
+                        }
                         // For Custom Timing
-                        Text(task.time
-                            .addingTimeInterval(CGFloat.random(in: 0...5000)), style: .time)
-                        
                         Text(task.title)
-                            .font(.title2.bold())
+                            .font(.title3.bold())
                     }
                     .padding(.vertical, 10)
                     .padding(.horizontal)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(
-                        Color.gray
-                            .opacity(0.5)
-                            .cornerRadius(10)
+                        Color(0xE5E5EA)
+                            .opacity(0.7)
+                            .cornerRadius(8)
                     )
                 }
             }
             else {
                 Text("  아직 할 일이 없네요... \n 얼른 무지개를 채워봐요!")
-                    .font(.custom("BMDoHyeon-OTF", size: 15))
+                    .font(.custom("BMDoHyeon-OTF", size: 18))
                     .opacity(0.5)
             }
             HStack {
@@ -157,12 +164,13 @@ struct CustomDatePicker: View {
                     
                     Spacer()
                     
-                    let rainbow : [Color] = [.red, .orange, .yellow, .green, .cyan, .blue, .purple, .white]
+//                    let rainbow : [Color] = [Color(0xCC0100), Color(0xFF9900), Color(0xFFFF00), Color(0x6AA84F), Color(0x70A7DC), Color(0x2B78E4), Color(0x7004B9), .white]
+                    let rainbow: [Color] = [.red, .orange, .yellow, .green, .cyan, .blue, .purple]
                     
                     Circle()
                         .fill(rainbow[makeColor(date: value.date)])
-                        .frame(width: 15, height: 15)
-                    
+                        .frame(width: 20, height: 20)
+                        .opacity(Double(task.checkedCount)/Double(task.taskCount))
                 }
                 else{
                     Text("\(value.day)")
