@@ -106,7 +106,7 @@ struct CustomDatePicker: View {
                         Button(action: {
                             //task.toggleTask()
                         }) {
-                            Image(systemName: "square")
+                            Image(systemName: task.isChecked ? "checkmark.square" : "square")
                                 .resizable()
                                 .frame(width: 20, height: 20, alignment: .leading)
                         }
