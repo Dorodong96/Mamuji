@@ -11,8 +11,12 @@ import SwiftUI
 // Array of Tasks
 struct Task: Identifiable{
     var id = UUID().uuidString
+    var isChecked: Bool = false
     var title: String
-    var time: Date = Date()
+    
+    mutating func toggleTask() {
+        isChecked = !isChecked
+    }
 }
 
 // Total Task Meta View
@@ -20,6 +24,21 @@ struct TaskMetaData: Identifiable{
     var id = UUID().uuidString
     var task: [Task]
     var taskDate: Date
+    var taskCount: Int
+    var checkedCount: Int = 0
+    
+    init(task: [Task], taskDate: Date, checkedCount: Int) {
+        self.task = task
+        self.taskDate = taskDate
+        self.taskCount = task.count
+        self.checkedCount = checkedCount
+    }
+}
+
+class TaskMetaDataViewModel: ObservableObject {
+    @Published var taskDatas : [TaskMetaData] = []
+    
+    
 }
 
 // sample Date for Testing
@@ -32,72 +51,94 @@ func getSampleDate(offset: Int)->Date{
 }
 
 // sample Tasks
-var tasks: [TaskMetaData] = [
-    TaskMetaData(task: [
-    
-        Task(title: "오늘도 열심히 개발하기"),
-        Task(title: "Study Swift"),
-        Task(title: "Nothing Much Workout")
-    ], taskDate: getSampleDate(offset: -1)),
-    
-    TaskMetaData(task: [
+extension TaskMetaData {
+    static var dummyData = [
+        TaskMetaData(task: [
+            
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "Study Swift"),
+            Task(title: "Nothing Much Workout")
+        ], taskDate: getSampleDate(offset: -1), checkedCount: 3),
         
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -2)),
-    
-    TaskMetaData(task: [
+        TaskMetaData(task: [
+            
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+        ], taskDate: getSampleDate(offset: -2), checkedCount: 3),
         
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -3)),
-    
-    TaskMetaData(task: [
+        TaskMetaData(task: [
+            
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기")
+        ], taskDate: getSampleDate(offset: -3), checkedCount: 3),
         
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -4)),
-    
-    TaskMetaData(task: [
+        TaskMetaData(task: [
+            
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기")
+        ], taskDate: getSampleDate(offset: -4), checkedCount: 3),
         
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -5)),
-    
-    TaskMetaData(task: [
+        TaskMetaData(task: [
+            
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기")
+        ], taskDate: getSampleDate(offset: -5), checkedCount: 1),
         
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -6)),
-    TaskMetaData(task: [
-        
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -7)),
-    TaskMetaData(task: [
-        
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -8)),
-    TaskMetaData(task: [
-        
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -9)),
-    TaskMetaData(task: [
-        
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -10)),
-    TaskMetaData(task: [
-        
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -11)),
-    TaskMetaData(task: [
-        
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -12)),
-    TaskMetaData(task: [
-        
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -13)),
-    TaskMetaData(task: [
-        
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -14)),
-    TaskMetaData(task: [
-        
-        Task(title: "오늘도 열심히 개발하기")
-    ], taskDate: getSampleDate(offset: -15))
-]
+        TaskMetaData(task: [
+            
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기")
+        ], taskDate: getSampleDate(offset: -6), checkedCount: 1),
+        TaskMetaData(task: [
+            
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기")
+        ], taskDate: getSampleDate(offset: -7), checkedCount: 3),
+        TaskMetaData(task: [
+            Task(title: "오늘도 열심히 개발하기")
+        ], taskDate: getSampleDate(offset: -8), checkedCount: 1),
+        TaskMetaData(task: [
+            
+            Task(title: "오늘도 열심히 개발하기")
+        ], taskDate: getSampleDate(offset: -9), checkedCount: 1),
+        TaskMetaData(task: [
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기")
+        ], taskDate: getSampleDate(offset: -10), checkedCount: 1),
+        TaskMetaData(task: [
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기")
+        ], taskDate: getSampleDate(offset: -11), checkedCount: 1),
+        TaskMetaData(task: [
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기")
+        ], taskDate: getSampleDate(offset: -12), checkedCount: 1),
+        TaskMetaData(task: [
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기")
+        ], taskDate: getSampleDate(offset: -13), checkedCount: 1),
+        TaskMetaData(task: [
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기")
+        ], taskDate: getSampleDate(offset: -14), checkedCount: 1),
+        TaskMetaData(task: [
+            
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기"),
+            Task(title: "오늘도 열심히 개발하기")
+        ], taskDate: getSampleDate(offset: -15), checkedCount: 1)
+    ]
+}
