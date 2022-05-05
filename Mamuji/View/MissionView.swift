@@ -50,7 +50,7 @@ struct MissionView: View {
             
             Text(vm.getContent())
                 .frame(width: 300, height: 150, alignment: .center)
-                .font(.custom("", size: 50))
+                .font(.custom("BMDoHyeon-OTF", size: 50))
         }
     }
     
