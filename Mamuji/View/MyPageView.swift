@@ -32,35 +32,35 @@ struct MyPageView: View {
     
     private var statusView: some View {
         VStack(spacing: 5) {
-        Text("평균달성률")
-            .font(.custom("BMDoHyeon-OTF", size: 25))
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding()
-        
+            Text("평균달성률")
+                .font(.custom("BMDoHyeon-OTF", size: 25))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+            
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
-                .frame(width: 352, height: 50, alignment: .center)
-            .foregroundColor(Color(UIColor.systemGray5))
+                    .frame(width: 352, height: 50, alignment: .center)
+                    .foregroundColor(Color(UIColor.systemGray5))
                 
                 
                 HStack(spacing:0) {
                     Color(UIColor.systemGray2)
                         .cornerRadius(8, corners: [.topLeft, .bottomLeft])
-                    .frame(width: CGFloat(checkedTask * 346 / totalTask), height: 42, alignment: .leading)
+                        .frame(width: CGFloat(checkedTask * 346 / totalTask), height: 42, alignment: .leading)
                     Color(UIColor.systemGray5)
                         .cornerRadius(10, corners: [.topRight, .bottomRight])
-                    .frame(width: CGFloat(346-(checkedTask * 346 / totalTask)), height: 42, alignment: .leading)
+                        .frame(width: CGFloat(346-(checkedTask * 346 / totalTask)), height: 42, alignment: .leading)
                 }
                 
                 Text("\(checkedTask * 100 / totalTask)%")
                     .font(.custom("BMDoHyeon-OTF", size: 18))
             }
-        
-        Text("잘 하고 있지 우리 아들 ~ ^_^")
-            .font(.custom("BMDoHyeon-OTF", size: 20))
-            .frame(maxWidth: .infinity, alignment: .center)
-            .foregroundColor(.gray)
-            .padding(.top, 5)
+            
+            Text("잘 하고 있지 우리 아들 ~ ^_^")
+                .font(.custom("BMDoHyeon-OTF", size: 20))
+                .frame(maxWidth: .infinity, alignment: .center)
+                .foregroundColor(.gray)
+                .padding(.top, 5)
         }
     }
     
@@ -80,18 +80,32 @@ struct MyPageView: View {
                 Rectangle()
                     .foregroundColor(.black)
                     .frame(maxWidth: 300, maxHeight: 2)
-                }
-                .position(x: UIScreen.main.bounds.width/2, y: 60)
-                
+            }
+            .position(x: UIScreen.main.bounds.width/2, y: 60)
+            
             LazyVGrid(columns: columns, spacing: 0) {
-                ForEach(0..<4) { _ in
-                    Image("vinyl")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill
-                        )
-                        .frame(width: 120, height: 170, alignment: .center)
-                        .clipped()
-                        .padding(.vertical)
+                ForEach(0..<4) { index in
+                    
+                    ZStack {
+                        if index == 0 {
+                            Image("pig")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 100, height: 100, alignment: .bottom)
+                                .padding(.top, 30)
+                        }
+                        
+                        Image("vinyl")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 120, height: 170, alignment: .center)
+                            .clipped()
+                            .padding(.vertical)
+                            .opacity(0.5)
+                        
+                        
+                    }
+                    
                 }
             }.padding(.top, 40)
         }
