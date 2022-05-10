@@ -9,12 +9,26 @@ import SwiftUI
 
 // Task Model and Sample Tasks
 // Array of Tasks
-struct Task: Identifiable{
+struct Task: Identifiable, Codable{
     var id = UUID().uuidString
     var title: String
     var isChecked: Bool = false
+}
+
+class TaskViewModel: ObservableObject {
+    @Published var task : Task
+    @Published var isChecked : Bool
     
-    mutating func toggleTask() {
+    init() {
+        task = Task(title: "Dummy")
+        isChecked = false
+    }
+
+    func setTask(_ task: Task) {
+        self.task = task
+    }
+    
+    func toggleTask() {
         isChecked = !isChecked
     }
 }
@@ -36,9 +50,21 @@ struct TaskMetaData: Identifiable{
 }
 
 class TaskMetaDataViewModel: ObservableObject {
-    @Published var taskDatas : [TaskMetaData] = []
+    @Published var taskDatas : [TaskMetaData]
+    @Published var taskData : TaskMetaData
     
+    init() {
+        taskDatas = TaskMetaData.dummyData
+        taskData = TaskMetaData(task: [
+            
+            Task(title: "", isChecked: false),
+        ], taskDate: getSampleDate(offset: 1), checkedCount: 0)
+    }
     
+    func getTaskData(_ taskData: TaskMetaData) -> TaskMetaData{
+        self.taskData = taskData
+        return self.taskData
+    }
 }
 
 // sample Date for Testing

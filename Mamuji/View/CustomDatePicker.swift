@@ -88,6 +88,10 @@ struct CustomDatePicker: View {
     }
     
     @State var tasks = TaskMetaData.dummyData
+    @ObservedObject var taskDataVm = TaskMetaDataViewModel()
+    @ObservedObject var taskVm = TaskViewModel()
+    @State var taskDataEx : TaskMetaData = TaskMetaData.dummyData[0]
+    
     // ToDo Task View
     private var TaskView : some View {
         VStack(spacing: 15) {
@@ -102,16 +106,18 @@ struct CustomDatePicker: View {
             {
                 // Make CheckList in here!!!
                 ForEach(task.task) { task in
+                    
                     HStack(spacing: 10) {
                         Button(action: {
-                            //task.toggleTask()
+                            taskVm.setTask(task)
+                            taskVm.toggleTask()
                         }) {
-                            Image(systemName: task.isChecked ? "checkmark.square" : "square")
+                            Image(systemName: taskVm.isChecked ? "checkmark.square" : "square")
                                 .resizable()
                                 .frame(width: 20, height: 20, alignment: .leading)
                         }
                         // For Custom Timing
-                        Text(task.title)
+                        Text(taskVm.task.title)
                             .font(.title3.bold())
                     }
                     .padding(.vertical, 10)
@@ -164,7 +170,6 @@ struct CustomDatePicker: View {
                     
                     Spacer()
                     
-//                    let rainbow : [Color] = [Color(0xCC0100), Color(0xFF9900), Color(0xFFFF00), Color(0x6AA84F), Color(0x70A7DC), Color(0x2B78E4), Color(0x7004B9), .white]
                     let rainbow: [Color] = [.red, .orange, .yellow, .green, .cyan, .blue, .purple]
                     
                     Circle()

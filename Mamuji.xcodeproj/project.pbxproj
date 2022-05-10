@@ -340,7 +340,7 @@
 				DEVELOPMENT_TEAM = BQSHS2D2FB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "/Users/dongkyukim/Dropbox (Developer Academy)/Workspace/Mamuji/Mamuji/Info.plist";
+				INFOPLIST_FILE = "/Users/dk1434/Dropbox (Developer Academy)/Workspace/Mamuji/Mamuji/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -370,7 +370,7 @@
 				DEVELOPMENT_TEAM = BQSHS2D2FB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "/Users/dongkyukim/Dropbox (Developer Academy)/Workspace/Mamuji/Mamuji/Info.plist";
+				INFOPLIST_FILE = "/Users/dk1434/Dropbox (Developer Academy)/Workspace/Mamuji/Mamuji/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
