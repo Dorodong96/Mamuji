@@ -23,18 +23,11 @@
 
 
 ## :fireworks: Screenshots
+|Home Screen|Mission View|MyPageView|
+|:--:|:--:|:--:|
+|<img src="https://user-images.githubusercontent.com/45297745/167636810-39fb2827-dd91-45d9-84f6-28d3bcd1e5b0.png" alt="App Screenshot" style="zoom:5%;" width="250"/>|<img src="https://user-images.githubusercontent.com/45297745/167636888-c10ff2d0-dfba-4ba1-8435-337facbc78be.png" alt="App Screenshot" style="zoom:5%;" width="250"/>|<img src="https://user-images.githubusercontent.com/45297745/167636908-d6e3ff89-950d-4a52-b91f-13a7b12af97d.png" alt="App Screenshot" style="zoom:5%;" width="250"/>|
 
-### Home Screen
 
-<img src="https://user-images.githubusercontent.com/45297745/167636810-39fb2827-dd91-45d9-84f6-28d3bcd1e5b0.png" alt="App Screenshot" style="zoom:5%;" width="250"/>
-
-### Mission View
-
-<img src="https://user-images.githubusercontent.com/45297745/167636888-c10ff2d0-dfba-4ba1-8435-337facbc78be.png" alt="App Screenshot" style="zoom:5%;" width="250"/>
-
-### MyPageView
-
-<img src="https://user-images.githubusercontent.com/45297745/167636908-d6e3ff89-950d-4a52-b91f-13a7b12af97d.png" alt="App Screenshot" style="zoom:5%;" width="250"/>
 
 
 ## :sparkles: Skills & Tech Stack
